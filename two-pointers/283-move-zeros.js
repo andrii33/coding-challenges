@@ -19,13 +19,16 @@
 
   1 <= nums.length <= 104
   -231 <= nums[i] <= 231 - 1
- */
 
-/**
+  1. (0, 1) nums[0,1,0,3,12]
+  2. (1, 2) nums[1,0,0,3,12]
+  3. (1, 3) nums[1,0,0,3,12]
+  4. (2, 4) nums[1,3,0,0,12]
+  5. (3, 5) nums[1,3,12,0,0]
  * @param {number[]} nums
  * @return {void} Do not return anything, modify nums in-place instead.
  */
-var moveZeroes = function(nums) {
+const moveZeroes = (nums) => {
   let i = 0
   let j = 1
   while (j < nums.length) {
@@ -43,4 +46,3 @@ var moveZeroes = function(nums) {
       }
   }
 };
-  
